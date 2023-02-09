@@ -19,8 +19,9 @@ namespace Calculator.Test.Unit
         {
             //Arrange
             //Act
+            uut.Add(2, 3);
             //Assert
-            Assert.That(uut.Add(2,3),Is.EqualTo(5));
+            Assert.AreEqual(5,uut.Accumulator);
 
         }
 
@@ -31,10 +32,10 @@ namespace Calculator.Test.Unit
 
 
             //Act
-            
+            uut.Substract(3, 2);
             //Assert
-            Assert.That(uut.Substract(3,2), Is.EqualTo(1));
 
+            Assert.AreEqual(1, uut.Accumulator);
         }
         [Test]
 
@@ -43,9 +44,9 @@ namespace Calculator.Test.Unit
 
             //Arrange
             //Act
-            
+            uut.Multiply(3, 2);
             //Assert
-            Assert.That(uut.Multiply(3, 2), Is.EqualTo(6));
+            Assert.AreEqual(6, uut.Accumulator);
         }
 
         [Test]
@@ -55,16 +56,18 @@ namespace Calculator.Test.Unit
 
             //Arrange
             //Act
+            uut.Power(3, 2);
             //Assert
-            Assert.That(uut.Power(3,2), Is.EqualTo(9));
+            Assert.AreEqual(9,uut.Accumulator);
 
         }
         [Test]
 
         public void Divide_givenTwoNumbers_ShouldReturnAValue()
         {
+            uut.divide(6, 6);
 
-            Assert.That(uut.divide(6, 6), Is.EqualTo(1));
+            Assert.AreEqual(1,uut.Accumulator);
         
         }
      
