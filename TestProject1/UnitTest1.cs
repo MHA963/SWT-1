@@ -60,11 +60,9 @@ namespace Calculator.Test.Unit
 
             //Act
             uut.Substract(3, 2);
-
-
             //Assert
-            Assert.That(uut.Substract(3,2), Is.EqualTo(1));
 
+            Assert.AreEqual(1, uut.Accumulator);
         }
         [Test]
         public void Subtract_GivenTwoMixedIntegers_ShouldReturnTheirDifference()
@@ -102,7 +100,7 @@ namespace Calculator.Test.Unit
             //Arrange
             //Act
             //Assert
-            Assert.That(uut.Multiply(3, 2), Is.EqualTo(6));
+            Assert.AreEqual(6, uut.Accumulator);
         }
         [Test]
         public void Multiply_GivenTwoMixedIntegers_ShouldReturnTheirMultiple()
@@ -138,8 +136,26 @@ namespace Calculator.Test.Unit
             //Arrange
             //Act
             //Assert
-            Assert.That(uut.Power(3, 2), Is.EqualTo(9));
+            Assert.AreEqual(9,uut.Accumulator);
 
+        }
+        [Test]
+
+        public void Divide_givenTwoNumbers_ShouldReturnAValue()
+        {
+            uut.divide(6, 6);
+
+            Assert.AreEqual(1,uut.Accumulator);
+        
+        }
+
+        [Test]
+
+        public void Clear_ShouldReturnValueOfZero()
+        {
+
+            uut.Clear();
+            Assert.AreEqual(0, uut.Accumulator);
         }
         [Test]
         public void Power_GivenNegativeInteger_And_NegativeExponetial_ShouldReturnValue()
