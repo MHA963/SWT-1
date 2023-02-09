@@ -18,10 +18,7 @@ namespace Calculator.Test.Unit
         public void Add_GivenTwoNumbers_shouldReturnTheirSum()
         {
             //Arrange
-
             //Act
-            uut.Add(2, 3);
-            
             //Assert
             Assert.That(uut.Add(2,3),Is.EqualTo(5));
 
@@ -34,9 +31,7 @@ namespace Calculator.Test.Unit
 
 
             //Act
-            uut.Substract(3, 2);
-
-
+            
             //Assert
             Assert.That(uut.Substract(3,2), Is.EqualTo(1));
 
@@ -48,8 +43,7 @@ namespace Calculator.Test.Unit
 
             //Arrange
             //Act
-            uut.Multiply(3, 2);
-
+            
             //Assert
             Assert.That(uut.Multiply(3, 2), Is.EqualTo(6));
         }
@@ -61,11 +55,19 @@ namespace Calculator.Test.Unit
 
             //Arrange
             //Act
-            uut.Power(3, 2);
             //Assert
-            Assert.That(uut.Power(3, 2), Is.EqualTo(9));
+            Assert.That(uut.Power(3,2), Is.EqualTo(9));
 
         }
+        [Test]
+
+        public void Divide_givenTwoNumbers_ShouldReturnAValue()
+        {
+
+            Assert.That(uut.divide(6, 6), Is.EqualTo(1));
+        
+        }
+     
 
 
     }
