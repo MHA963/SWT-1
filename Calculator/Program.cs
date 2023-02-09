@@ -22,12 +22,9 @@ namespace Calculator
         public double Substract(double a, double b) { return a - b; }
 
         public double Multiply(double a, double b) { return a * b; }
-        public double Power(double a, double exp)
+        public double Power(double a, double b)
         {
-            if (exp == 0) return 1;
-            double result = 1;
-            for (int i = 0; i < exp; i++) { result *= a; }
-            return result;
+           return Math.Pow(a, b);
         }
     }
 
