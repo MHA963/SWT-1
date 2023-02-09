@@ -70,8 +70,16 @@ namespace Calculator.Test.Unit
             Assert.AreEqual(1,uut.Accumulator);
         
         }
-     
 
+        [Test]
+
+        public void Clear_ShouldReturnValueOfZero()
+        {
+
+            uut.Clear();
+            Assert.AreEqual(0, uut.Accumulator);
+        }
+        
 
     }
 }
