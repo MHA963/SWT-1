@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
 using System;
 using System.ComponentModel;
 
@@ -32,25 +32,12 @@ namespace Calculator
         
         public double Substract(double a, double b) { Accumulator =  a - b; return Accumulator; }
 
-<<<<<<< HEAD
+
         public double Multiply(double a, double b) { return a * b; }
         public double Power(double a, double b)
         {
-           return Math.Pow(a, b);
-=======
-        public double Multiply(double a, double b) { Accumulator = a * b; return Accumulator; }
-        
-        public double Power(double a, double exp)
-        {
-            if (exp == 0)
-            { Accumulator = 1;
-                return Accumulator;
-            }
-            double result = 1;
-            for (int i = 0; i < exp; i++) { result *= a; }
-            Accumulator = result;
-            return Accumulator;
->>>>>>> 8fb5e839b77df9cf01a6cfd743321d9f62fd3752
+            return Math.Pow(a, b);
+
         }
         
         public double divide(double divident, double divisor)

@@ -100,7 +100,7 @@ namespace Calculator.Test.Unit
             //Arrange
             //Act
             //Assert
-            Assert.AreEqual(6, uut.Accumulator);
+            Assert.That(uut.Multiply(3, 2), Is.EqualTo(6));
         }
         [Test]
         public void Multiply_GivenTwoMixedIntegers_ShouldReturnTheirMultiple()
@@ -136,8 +136,7 @@ namespace Calculator.Test.Unit
             //Arrange
             //Act
             //Assert
-            Assert.AreEqual(9,uut.Accumulator);
-
+            Assert.That(uut.Power(3, 2), Is.EqualTo(9));
         }
         [Test]
 
