@@ -139,24 +139,6 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Power(3, 2), Is.EqualTo(9));
         }
         [Test]
-
-        public void Divide_givenTwoNumbers_ShouldReturnAValue()
-        {
-            uut.divide(6, 6);
-
-            Assert.AreEqual(1,uut.Accumulator);
-        
-        }
-
-        [Test]
-
-        public void Clear_ShouldReturnValueOfZero()
-        {
-
-            uut.Clear();
-            Assert.AreEqual(0, uut.Accumulator);
-        }
-        [Test]
         public void Power_GivenNegativeInteger_And_NegativeExponetial_ShouldReturnValue()
         {
 
@@ -181,6 +163,73 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Power(2, -3), Is.EqualTo(0.125));
 
         }
+        [Test]
 
+        public void Divide_givenTwoPositiveNumbers_ShouldReturnAValue()
+        {
+            uut.divide(6, 6);
+
+            Assert.AreEqual(1, uut.Accumulator);
+        }
+
+        [Test]
+
+        public void Divide_GivenOneNegativeNumber_ShouldReturnAValue()
+        {
+            uut.divide(-6, 6);
+
+            Assert.AreEqual(-1, uut.Accumulator);
+        }
+
+        [Test]
+
+        public void Divide_GivenTwoNegativeNumbers_ShouldReturnAValue()
+        {
+            uut.divide(-6, -6);
+
+            Assert.AreEqual(1, uut.Accumulator);
+        }
+
+        [Test]
+
+        public void Clear_ShouldPowerReturnValueOfZero()
+        {
+            //Arrange
+            var a = -2;
+            var b = -3;
+
+            var expectedresult = -0.125;
+            //Act
+            var result = uut.Power(a, b);
+            uut.Clear();
+            //Assert
+            Assert.AreEqual(0, uut.Accumulator);
+        }
+
+        [Test]
+        public void Clear_ShouldAddReturnValueOfZero()
+        {
+            var a = 2;
+            var b = 3;
+
+            var expectedresult = 5;
+            //Act
+            var result = uut.Add(a, b);
+            uut.Clear();
+            //Assert
+            Assert.AreEqual(0, uut.Accumulator);
+        }
+        public void Clear_ShouldSubtractReturnValueOfZero()
+        {
+            var a = 2;
+            var b = 3;
+
+            var expectedresult = -1;
+            //Act
+            var result = uut.Substract(a, b);
+            uut.Clear();
+            //Assert
+            Assert.AreEqual(0, uut.Accumulator);
+        }
     }
-}
+    }
