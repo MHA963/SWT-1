@@ -8,7 +8,7 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            Calculator cal = new Calculator();
+            //Calculator cal = new Calculator();
             //Console.WriteLine(cal.Add(1,5));
             //Console.WriteLine(cal.Substract(3, 2));
             //Console.WriteLine(cal.Multiply(2, 2));
